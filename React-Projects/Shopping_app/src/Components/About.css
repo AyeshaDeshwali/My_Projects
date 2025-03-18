@@ -1,0 +1,130 @@
+.about-section {
+  text-align: center;
+  padding: 2rem 9%;
+}
+
+.about-section .about {
+  text-align: center;
+  margin-bottom: 50px;
+  margin-top: 30px;
+  padding: 10px;
+  background-color: rgba(51, 71, 255, 0.05);
+}
+
+.about-section img {
+  width: 480px;
+  height: 440px;
+  margin-left: -40%;
+  position: absolute;
+  border-radius: 8px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.about-section .about {
+  margin-bottom: 70px;
+  padding: 10px;
+  background-color: rgba(51, 71, 255, 0.05);
+}
+.about-section .about span {
+  color: #383785;
+}
+.about-section .text {
+  margin-left: 27%;
+}
+.about-section .text p {
+  margin-left: 20%;
+  font-size: 1.2rem;
+  color: #979696;
+  text-align: justify;
+  text-align-last: justify;
+}
+
+.about-section .text h1 {
+  margin-left: -41%;
+  font-size: 30px;
+  margin-bottom: 15px;
+  margin-top: -10px;
+}
+
+.about-section .text button {
+  width: 120px;
+  height: 35px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer; /* कर्सर का पॉइंटर बनाना */
+  border-radius: 5px; /* बटन के कोने गोल करना */
+  transition: background-color 0.3s ease; /* होवर इफेक्ट के लिए ट्रांजिशन */
+  transition: 0.4s;
+  background-color: rgb(22, 52, 117);
+  color: white;
+  margin-left: -49%;
+  border: 1px solid #1a222e;
+  margin-top: 18px;
+}
+
+.about-section .text button:hover {
+  background-color: rgb(17, 32, 80);
+  box-shadow: #9df165 0px 2px 4px 0px, #9df165 0px 2px 16px 0px;
+}
+.icons-container {
+  display: flex;
+  gap: 1.5rem;
+  height: 150px;
+  padding: 10px;
+  background: #eee;
+  margin-top: 100px;
+  justify-content: space-between; /* Space items evenly */
+  box-shadow: rgba(89, 88, 88, 0.583) 0px 2px 8px 0px;
+}
+
+.icons-container .icons {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin-top: 15px;
+  height: 100px;
+  background-color: #fff;
+  border: 8px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  flex: 1 1 calc(25% - 1.5rem);
+  box-sizing: border-box; /* Include padding and border in the width */
+}
+
+.icons-container .icons img {
+  height: 60px;
+  width: 60px;
+  margin-left: 20px;
+}
+
+.icons-container .icons h3 {
+  color: #333;
+  margin-left: 150px;
+  font-size: 1rem;
+  margin-top: -25px;
+}
+
+.icons-container .icons span {
+  color: #555;
+  font-size: 1rem;
+  position: absolute;
+  margin-top: 5px;
+  margin-left: 18px;
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+  .icons-container .icons {
+    flex: 1 1 calc(33.333% - 1.5rem); /* 3 items per row */
+  }
+}
+
+@media (max-width: 768px) {
+  .icons-container .icons {
+    flex: 1 1 calc(50% - 1.5rem); /* 2 items per row */
+  }
+}
+
+@media (max-width: 480px) {
+  .icons-container .icons {
+    flex: 1 1 100%; /* 1 item per row */
+  }
+}

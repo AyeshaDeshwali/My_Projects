@@ -1,0 +1,23 @@
+.new-nxpense {
+  background: #574949;
+  padding: 1rem;
+  margin: 2rem auto;
+  border-radius: 12px;
+  max-width: 95%;
+  text-align: center;
+  margin-right: 12px;
+}
+
+.new-nxpense button {
+  font-size: inherit;
+  cursor: pointer;
+  padding: 1rem;
+  background: #000;
+  text-align: center;
+}
+
+.new-nxpense button:hover,
+.new-nxpense button:active {
+  background-color: #574949;
+  border-color: #324332;
+}

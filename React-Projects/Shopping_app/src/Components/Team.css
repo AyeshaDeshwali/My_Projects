@@ -1,0 +1,74 @@
+/* Team.css */
+
+.team-container {
+  padding: 2rem 9%;
+}
+.team-container .teams {
+  text-align: center;
+  margin-bottom: 50px;
+  padding: 10px;
+  background-color: rgba(51, 71, 255, 0.05);
+}
+.team-container .teams span {
+  color: #383785;
+}
+
+.container {
+  overflow: hidden; /* Hide overflow to keep the slider within bounds */
+  position: relative;
+  width: 100%;
+}
+
+.slider {
+  display: flex;
+  width: 100%; /* Ensure the slider takes the full width of the container */
+  animation: slide 30s linear infinite; /* Adjust duration as needed */
+}
+@keyframes slide {
+  0% {
+    transform: translateX(0); /* Start at the initial position */
+  }
+  100% {
+    transform: translateX(-100%); /* Move to the end of the slider */
+  }
+}
+
+.same-card img {
+  border: 0px;
+  border-radius: 50%;
+  width: 220px;
+  margin: 30px;
+  height: 220px;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+.same-card h5,
+h6,
+p {
+  text-align: center;
+}
+
+.same-card h6 {
+  font-weight: bold;
+  color: #a6d498;
+}
+.same-card h5 {
+  color: #c4c3c3;
+  letter-spacing: 1px;
+}
+
+.same-card p {
+  color: #a19d9d;
+}
+.same-card h6 {
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.same-card p {
+  font-size: 15px;
+  letter-spacing: normal;
+  letter-spacing: 1px;
+}

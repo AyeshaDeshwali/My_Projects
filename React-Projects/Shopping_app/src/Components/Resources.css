@@ -1,0 +1,83 @@
+/* Basic reset */
+body,
+h1,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.resources-container {
+  padding: 2rem 9%;
+}
+.resources-container .resources {
+  text-align: center;
+  margin-bottom: 50px;
+  margin-top: 30px;
+  padding: 10px;
+  background-color: rgba(51, 71, 255, 0.05);
+}
+.resources-container .resources span {
+  color: #383785;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.resources-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Space between cards */
+  justify-content: center;
+}
+
+.resources-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  text-align: center;
+  width: calc(25% - 1.5rem); /* Fit 4 cards per row */
+  margin-bottom: 1.5rem;
+}
+
+.resources-intro {
+  font-size: 1.2em;
+  color: #666;
+  margin-bottom: 40px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.resources-info p {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.resources-info h3 {
+  color: #333;
+  font-weight: bold;
+  font-size: 1.3em;
+  line-height: 1.5;
+}
+
+.resource-icon {
+  font-size: 3rem; /* Adjust icon size */
+  color: rgb(19, 46, 104); /* Use highlight color */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem; /* Add space below the icon */
+  width: 100%;
+}
+
+/* Center the text and icon in the card */

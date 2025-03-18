@@ -1,0 +1,71 @@
+.containerProducts {
+  padding: 2rem 9%;
+}
+.containerProducts .product {
+  text-align: center;
+  margin-bottom: 50px;
+  margin-top: 30px;
+  padding: 10px;
+  background-color: rgba(51, 71, 255, 0.05);
+}
+.containerProducts .product span {
+  color: #383785;
+}
+
+.links ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.links li {
+  margin: 0;
+  list-style: none;
+}
+
+.links li a {
+  text-decoration: none;
+  color: black;
+  padding: 0.5rem 1rem;
+  display: block;
+  transition: color 0.3s, background-color 0.3s;
+  margin-left: -48px;
+}
+
+.links li a:hover {
+  color: #007bff;
+  background-color: #f8f9fa;
+}
+
+.accordion-item {
+  width: 200px;
+  margin-left: -12px;
+}
+
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -10px;
+}
+
+.gallery-image {
+  width: 320px;
+  height: 320px;
+  padding: 10px;
+  margin-left: 5px;
+  object-fit: cover;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
+    rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+}
+
+.mainImages {
+  margin-top: -15px;
+}
+
+.mainImages img {
+  width: 320px;
+  height: 320px;
+  padding: 10px;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
+    rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+}

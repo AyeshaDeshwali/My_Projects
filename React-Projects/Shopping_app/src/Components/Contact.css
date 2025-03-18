@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Hind+Guntur:wght@300;400;500;600;700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+/* Center the form container with flexbox */
+
+.contact-container {
+  padding: 2rem 9%;
+}
+.contact-container .contact {
+  text-align: center;
+  margin-bottom: 50px;
+  margin-top: 30px;
+  padding: 10px;
+  background-color: rgba(51, 71, 255, 0.05);
+}
+.contact-container .contact span {
+  color: #383785;
+}
+
+.container-form {
+  font-family: "Raleway", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 65%;
+  margin-left: 17%;
+  height: 550px; /* Full viewport height */
+  /* background: url("https://t4.ftcdn.net/jpg/02/05/94/93/360_F_205949307_Rz22k6pB6KR7YnJ5vSQjWt1hbJd6t2WB.webp") */
+  /* background: url("https://media.istockphoto.com/id/1370730195/photo/yes-huge-sales-in-webstore-overjoyed-indian-couple-holding-credit-card-and-using-laptop.jpg?s=612x612&w=0&k=20&c=UscTU6OdNvuBdmtbPJ1POxjGbBZybqMzkBdt9r1gC5M=") */
+  background: url("https://www.shutterstock.com/image-photo/portrait-happy-smiling-asian-woman-260nw-1902086140.jpg")
+    no-repeat center center;
+  border-radius: 10px;
+  padding-bottom: 40px;
+  box-shadow: rgba(144, 142, 142, 0.25) 0px 14px 28px,
+    rgba(138, 132, 132, 0.22) 0px 10px 10px;
+  margin-bottom: 30px;
+  background-size: cover; /* Ensure the image covers the entire area */
+}
+
+/* Form container styling */
+.form {
+  background-color: rgba(255, 255, 255, 0.677);
+  padding: 30px;
+  border: none;
+  height: 400px;
+  margin-left: -480px;
+  margin-top: -40px;
+  text-align: left;
+  box-shadow: rgba(220, 221, 220, 0.67) 0px 2px 4px 0px,
+    rgba(177, 177, 177, 0.822) 0px 2px 16px 0px;
+  width: 40%; /* Make sure form is responsive */
+}
+
+/* Heading margin */
+.form-contact {
+  margin: 0px 0px 20px 0px;
+  color: #9f8d8d;
+  font-size: 25px;
+  margin-top: -10px;
+}
+
+/* Input field styling */
+input,
+textarea {
+  width: 85%; /* Make input fields take full width inside the form */
+  padding: 10px;
+  margin: 10px 0px;
+  border: none;
+  border-bottom: 2px solid #b8b6b6; /* Only bottom line remains */
+  font-size: 16px;
+  border-radius: 0px;
+  outline: none;
+  background-color: rgba(217, 218, 220, 0);
+}
+
+textarea {
+  height: 80px;
+  padding-top: 40px;
+  /* padding-left: 10px; */
+}
+
+input:focus,
+textarea:focus {
+  border-bottom: 2px solid #333; /* Focus state on bottom border */
+}
+
+/* Submit button styling */
+.submit-btn {
+  background-color: rgb(19, 46, 104);
+  transition: background-color 0.3s ease; /* होवर इफेक्ट के लिए ट्रांजिशन */
+  transition: 0.4s;
+  border: none;
+  color: white;
+  font-size: 16px;
+  padding: 12px;
+  cursor: pointer;
+  font-weight: 500;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  width: 85%; /* Make button full width */
+}
+
+.submit-btn:hover {
+  background-color: rgb(17, 32, 80);
+  box-shadow: #9df165 0px 2px 4px 0px, #9df165 0px 2px 16px 0px;
+}
+
+.error {
+  color: red;
+  margin: 0px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.container-form .box {
+  height: 360px;
+  width: 550px;
+  position: absolute;
+  margin-left: 430px;
+  padding: 20px;
+  margin-top: 160px;
+  color: white;
+  background-color: rgba(40, 37, 38, 0.555);
+}
+
+.box .icons {
+  margin-left: 15px;
+  color: rgb(212, 209, 209);
+  font-size: 25px;
+}
+
+.box span {
+  font-size: 19px;
+  margin-left: 35px;
+  font-weight: bold;
+  margin-top: -20px;
+  color: #e0ddddd2;
+}
+
+.same-p-tag1 {
+  margin-left: -110px;
+  color: #f1e0e0;
+  font-size: 18px;
+  margin-top: 7px;
+}
+
+.same-p-tag2 {
+  color: #f1e0e0;
+  margin-left: 10px;
+  margin-top: 7px;
+}
+
+.same-p-tag3 {
+  color: #f1e0e0;
+  margin-left: -30px;
+  margin-top: 7px;
+}
+
+.info-item {
+  margin-top: 30px;
+}

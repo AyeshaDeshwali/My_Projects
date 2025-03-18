@@ -1,0 +1,83 @@
+/* Basic reset */
+body,
+h1,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.service-container {
+  padding: 2rem 9%;
+}
+.service-container .service {
+  text-align: center;
+  margin-bottom: 50px;
+  padding: 10px;
+  background-color: rgba(51, 71, 255, 0.05);
+}
+.service-container .service span {
+  color: #383785;
+}
+
+.services-intro {
+  font-size: 1.2em;
+  color: #666;
+  margin-bottom: 40px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Service List Styles */
+.container {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.service-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Space between cards */
+  justify-content: center;
+}
+
+.service-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: calc(
+    25% - 20px
+  ); /* Adjust width for 4 cards per row, accounting for gap */
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.service-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.service-info h3 {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.service-info p {
+  color: #555;
+  font-size: 1em;
+  line-height: 1.5;
+}

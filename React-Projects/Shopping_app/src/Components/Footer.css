@@ -1,0 +1,124 @@
+.footer-container {
+  display: flex;
+  background-color: rgb(22, 22, 22);
+  color: white;
+  width: 100%;
+  padding: 50px;
+  height: 650px;
+}
+
+.under-line {
+  text-decoration: underline;
+  color: #d1d1d1;
+  cursor: pointer;
+}
+.under-line:hover {
+  color: #ebe6e6;
+}
+.footer-container .connect {
+  margin-left: 10%;
+  margin-bottom: 20px;
+}
+
+.footer-container .connect h4 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #e2dfdf;
+}
+
+.footer-info {
+  font-size: 1.3em;
+  color: #969696;
+  margin-top: 30px;
+}
+
+.footer-container .icons {
+  margin-top: 30px;
+  margin-left: -22px;
+}
+.footer-container .icons i {
+  background: white;
+  color: rgb(19, 46, 104);
+  height: 40px;
+  width: 40px;
+  font-size: 1.3rem;
+  border-radius: 50%;
+  text-align: center;
+  padding-top: 10px;
+  margin-left: 15px;
+  box-shadow: #9e9f9e 0px 2px 4px 0px, #bcc1b9 0px 2px 16px 0px;
+}
+
+.footer-container .icons i:hover {
+  cursor: pointer;
+  box-shadow: #9df165 0px 2px 4px 0px, #9df165 0px 2px 16px 0px;
+}
+.footer-container .get {
+  margin-left: 20%;
+}
+.footer-container .get h4 {
+  font-size: 28px;
+  color: #e2dfdf;
+
+  margin-bottom: 20px;
+}
+.footer-container .get .input-group {
+  width: 120%;
+  height: 13%;
+  margin-top: 25px;
+}
+
+.footer-container .get .input-group .footer-btn {
+  width: 150px;
+  height: 72%;
+  margin-top: 10px;
+  background-color: rgb(19, 46, 104);
+  border: none;
+  color: white;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+.footer-container .get .input-group .footer-btn:hover {
+  background-color: rgb(15, 29, 74);
+  transition: 1s;
+  box-shadow: #9df165 0px 2px 4px 0px, #9df165 0px 2px 16px 0px;
+}
+
+.next {
+  position: absolute;
+  margin-top: -13%;
+  color: white;
+  margin-left: 5%;
+  display: flex;
+}
+
+.next .footer-list {
+  margin-left: 120px;
+}
+
+.next .footer-list h5 {
+  color: #e2dfdf;
+  text-align: center;
+}
+
+.next .footer-list ul li {
+  font-size: 1.1rem;
+  margin-top: 10px;
+  list-style-type: none;
+  color: #afafaf;
+}
+
+.next .footer-list ul li:hover {
+  text-decoration: underline;
+  cursor: pointer;
+  color: #ebe6e6;
+}
+
+.center-footer-border {
+  border-bottom: 2px solid rgb(220, 222, 220); /* Adjust thickness and color as needed */
+  width: 100%; /* Adjust width as per requirement */
+  margin: 30px auto; /* Centers the border */
+  position: absolute;
+  margin-top: -16%;
+}

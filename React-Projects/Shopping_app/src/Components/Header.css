@@ -1,0 +1,140 @@
+.main {
+  display: flex; /* Flexbox का उपयोग करके एलिमेंट्स को लेआउट करना */
+  align-items: center; /* वर्टिकल सेंटरिंग */
+  background-color: #f8f9fa; /* हल्का ग्रे बैकग्राउंड */
+  padding: 10px 20px; /* padding से कंटेंट को स्पेस देना */
+  box-shadow: 0 4px 8px rgba(103, 99, 99, 0.1); /* हल्की शैडो */
+}
+
+.logo {
+  width: 120px;
+  cursor: pointer;
+  height: 50px; /* लोगो की ऊँचाई */
+  margin-right: 20px; /* लोगो और नेविगेशन के बीच स्पेस */
+}
+
+nav {
+  display: flex; /* Flexbox का उपयोग करके नेविगेशन को लेआउट करना */
+  flex: 1; /* नेविगेशन को उपलब्ध स्पेस भरने के लिए */
+  align-items: center; /* वर्टिकल सेंटरिंग */
+  justify-content: space-between; /* स्पेस को एलाइन करने के लिए */
+}
+
+nav ul {
+  list-style-type: none; /* बुलेट पॉइंट हटाना */
+  margin: 0;
+  padding: 0;
+  margin-left: -100px;
+  display: flex; /* लिस्ट आइटम्स को एक पंक्ति में रखना */
+  justify-content: center; /* लिंक्स को सेंटर में रखना */
+}
+
+nav ul li {
+  margin: 0 15px; /* आइटम्स के बीच में स्पेस देना */
+}
+
+nav ul li:hover {
+  text-shadow: rgba(49, 255, 7, 0.89) 1px 0 10px;
+}
+nav ul li a {
+  text-decoration: none; /* अंडरलाइन हटाना */
+  color: rgb(18, 55, 136); /* नीला रंग */
+  font-size: 1.3rem; /* टेक्स्ट का साइज */
+  font-weight: 400;
+  transition: color 0.3s ease; /* होवर इफेक्ट के लिए ट्रांजिशन */
+}
+
+nav ul li a:hover {
+  color: #152433; /* होवर पर गहरा नीला रंग */
+}
+
+.nav-links {
+  margin-left: 32%;
+}
+
+nav button {
+  margin-left: 20px; /* बटन और आइकन के बीच स्पेस */
+  padding: 5px 15px; /* बटन का पेडिंग */
+  font-size: 16px; /* बटन का टेक्स्ट साइज */
+  border: none; /* बटन का बॉर्डर हटाना */
+  color: white; /* बटन का टेक्स्ट रंग */
+  cursor: pointer; /* कर्सर का पॉइंटर बनाना */
+  border-radius: 5px; /* बटन के कोने गोल करना */
+  transition: background-color 0.3s ease; /* होवर इफेक्ट के लिए ट्रांजिशन */
+  transition: 0.4s;
+  color: #fff;
+  background-color: rgb(16, 40, 92);
+  border: 1px solid #1a222e;
+  position: relative;
+  margin-top: -20px;
+  font-weight: 500;
+}
+
+nav button:hover {
+  background-color: rgb(14, 27, 69);
+  box-shadow: #9df165 0px 2px 4px 0px, #9df165 0px 2px 16px 0px;
+}
+
+.theme-checkbox {
+  opacity: 0;
+  position: absolute;
+}
+.label {
+  width: 50px;
+  background-color: rgb(16, 40, 92);
+  display: flex;
+  border-radius: 18px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  position: relative;
+  transform: scale(1.5);
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+.ball {
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+  position: absolute;
+  right: 1px;
+  border-radius: 50%;
+  transition: transform 0.2s linear;
+}
+
+.theme-checkbox:checked + .label .ball {
+  transform: translateX(-31px); /* Move ball to the left */
+}
+
+svg {
+  height: 11px;
+  width: 11px;
+}
+
+.bi-sun {
+  color: #ffb643;
+}
+
+.bi-moon {
+  color: rgb(252, 193, 2);
+}
+
+.theme-checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.all {
+  position: absolute;
+  margin-left: -55px;
+}
+
+.all:hover {
+  box-shadow: #9df165 0px 2px 4px 0px, #19ff04 0px 2px 16px 0px;
+}
+
+.content img {
+  width: 100%;
+  height: 600px;
+}
