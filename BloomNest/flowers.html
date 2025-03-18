@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flowers</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <style>
+      :root {
+        --pink: #e84393;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+        outline: none;
+        border: none;
+        text-transform: capitalize;
+        transition: 0.2s liner;
+        text-decoration: none;
+      }
+
+      html {
+        font-size: 62.5%;
+        scroll-behavior: smooth;
+        scroll-padding-top: 6rem;
+      }
+
+      section {
+        padding: 2rem 9%;
+      }
+
+      .heading {
+        text-align: center;
+        font-size: 4rem;
+        color: #333;
+        padding: 1rem;
+        margin: 2rem 0;
+        background: rgba(255, 51, 153, 0.05);
+      }
+
+      .heading span {
+        color: var(--pink);
+      }
+
+      .btn {
+        display: inline-block;
+        margin-top: 1rem;
+        border-radius: 5rem;
+        background: #333;
+        color: #fff;
+        padding: 0.9rem 3.5rem;
+        cursor: pointer;
+        font-size: 1.7rem;
+      }
+
+      .btn:hover {
+        background: var(--pink);
+      }
+
+      header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: 2rem 9%;
+        display: flex;
+        background: #fff;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 1000;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+      }
+
+      header .logo {
+        font-size: 3rem;
+        color: #333;
+        font-weight: bolder;
+      }
+
+      header .logo span {
+        color: var(--pink);
+      }
+
+      header .navbar a {
+        font-size: 2rem;
+        padding: 0 1.5rem;
+        color: #666;
+      }
+
+      header .navbar a:hover {
+        color: var(--pink);
+      }
+
+      header .icons a {
+        font-size: 2.5rem;
+        color: #333;
+        margin-left: 1.5rem;
+      }
+
+      header .icons a:hover {
+        color: var(--pink);
+      }
+
+      header #toggler {
+        display: none;
+      }
+
+      header .fa-bars {
+        font-size: 3rem;
+        color: #333;
+        border-radius: 0.5rem;
+        padding: 0.5rem 1.5rem;
+        cursor: pointer;
+        border: 0.1rem solid rgba(0, 0, 0, 0.3);
+        display: none;
+      }
+
+      .home {
+        display: flex;
+        align-items: center;
+        min-height: 100vh;
+        background: url("https://img.freepik.com/free-photo/copy-space-roses-vase_23-2148860002.jpg?w=2000")
+          no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+
+      /*https://img.freepik.com/premium-photo/valentine-s-day-mother-s-day-design-concept-background-with-pink-flower-gift-pink-background_315337-12939.jpg?w=2000*/
+      /*https://img.freepik.com/premium-photo/decorative-web-banner-close-up-blooming-pink-roses-flowers-petals-isolated-white-table-background-floral-frame-composition-empty-space-generative-ai-illustrator_993599-2933.jpg*/
+      /*https://img.freepik.com/free-photo/copy-space-roses-vase_23-2148860002.jpg?w=2000*/
+      /*https://img.freepik.com/premium-photo/majestic-petals-elegant-display-florals-grandeur_481747-350.jpg*/
+      /*https://img.freepik.com/premium-photo/bouquets-delight-journey-into-floral-elegance-beautiful-backgrounds_481747-488.jpg*/
+      .home .content {
+        max-width: 50rem;
+      }
+
+      .home .content h3 {
+        font-size: 6rem;
+        color: #333;
+      }
+
+      .home .content span {
+        font-size: 3.5rem;
+        color: var(--pink);
+        padding: 1rem 0;
+        line-height: 1.5;
+      }
+
+      .home .content p {
+        font-size: 1.5rem;
+        color: #999;
+        padding: 1rem 0;
+        line-height: 1.5;
+      }
+
+      .about .row {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+        padding: 2rem 0;
+        padding-bottom: 3rem;
+      }
+
+      .about .row .video-container {
+        flex: 1 1 40rem;
+        position: relative;
+      }
+
+      .about .row .video-container video {
+        width: 100%;
+        border: 1.5rem solid #fff;
+        border-radius: 0.5rem;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .about .row .video-container h3 {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 3rem;
+        color: #333;
+        background: #fff;
+        width: 100%;
+        padding: 1rem 2rem;
+        text-align: center;
+        mix-blend-mode: screen;
+      }
+
+      .about .row .content {
+        flex: 1 1 40rem;
+      }
+
+      .about .row .content h3 {
+        font-size: 3rem;
+        color: #333;
+      }
+
+      .about .row .content p {
+        font-size: 1.5rem;
+        color: #999;
+        padding: 0.5rem 0;
+        padding-top: 1rem;
+        line-height: 1.5;
+      }
+
+      .icons-container {
+        background: #eee;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+      }
+
+      .icons-container .icons {
+        background-color: #fff;
+        border: 1rem solid rgba(0, 0, 0, 0.1);
+        padding: 2rem;
+        display: flex;
+        align-items: center;
+        flex: 1 1 25rem;
+      }
+
+      .icons-container .icons img {
+        height: 5rem;
+        margin-right: 2rem;
+      }
+
+      .icons-container .icons h3 {
+        color: #333;
+        padding-bottom: 0.5rem;
+        font-size: 1.5rem;
+      }
+
+      .icons-container .icons span {
+        color: #555;
+        padding-bottom: 0.5rem;
+        font-size: 1.3rem;
+      }
+
+      .products .box-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        justify-content: space-between;
+      }
+
+      .products .box-container .box {
+        flex: 1 1 calc(33.33% - 1rem);
+        box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+        border-radius: 0.5rem;
+        border: 0.1rem solid rgba(0, 0, 0, 0.1);
+        position: relative;
+      }
+
+      .products .box-container .box .discount {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        padding: 0.7rem 1rem;
+        font-size: 2rem;
+        color: var(--pink);
+        background: rgba(255, 51, 153, 0.05);
+        z-index: 1;
+        border-radius: 0.5rem;
+      }
+
+      .products .box-container .box .image {
+        position: relative;
+        text-align: center;
+        padding-top: 2rem;
+        overflow: hidden;
+      }
+
+      .products .box-container .box .image img {
+        height: 26rem;
+      }
+
+      .products .box-container .box:hover .image img {
+        transform: scale(1.1);
+      }
+
+      .products .box-container .box .image .icons {
+        position: absolute;
+        bottom: -7rem;
+        left: 0;
+        right: 0;
+        display: flex;
+      }
+
+      .products .box-container .box:hover .image .icons {
+        bottom: 0;
+      }
+
+      .products .box-container .box .image .icons a {
+        height: 5rem;
+        line-height: 5rem;
+        font-size: 2rem;
+        background: var(--pink);
+        color: white;
+        width: 50%;
+      }
+
+      .products .box-container .box .image .icons .cart-btn {
+        border-left: 0.1rem solid #fff7;
+        border-right: 0.1rem solid #fff7;
+        width: 100%;
+      }
+
+      .products .box-container .box .image .icons a:hover {
+        background-color: #333;
+      }
+
+      .products .box-container .box .content {
+        padding: 2rem;
+        text-align: center;
+      }
+
+      .products .box-container .box .content h3 {
+        font-size: 2.5rem;
+        color: #333;
+      }
+
+      .products .box-container .box .content .price {
+        font-size: 2.5rem;
+        color: var(--pink);
+        font-weight: bolder;
+        padding-top: 1re;
+      }
+
+      .products .box-container .box .content .price span {
+        font-size: 1.5rem;
+        color: #999;
+        font-weight: lighter;
+        text-decoration: line-through;
+      }
+
+      .review .box-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+      }
+
+      .review .box-container .box {
+        flex: 1 1 30rem;
+        box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+        border-radius: 0.5rem;
+        padding: 3rem 2rem;
+        position: relative;
+        border: 0.1rem solid rgba(0, 0, 0, 0.1);
+      }
+
+      .review .box-container .box .fa-quote-right {
+        position: absolute;
+        bottom: 3rem;
+        right: 3rem;
+        font-size: 6rem;
+        color: #eee;
+      }
+
+      .review .box-container .box .stars i {
+        color: var(--pink);
+        font-size: 2rem;
+      }
+
+      .review .box-container .box p {
+        color: #999;
+        font-size: 1.5rem;
+        line-height: 1.5;
+        padding-top: 2rem;
+      }
+
+      .review .box-container .box .user {
+        display: flex;
+        align-items: center;
+        padding-top: 2rem;
+      }
+
+      .review .box-container .box .user img {
+        height: 6rem;
+        width: 6rem;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-right: 1rem;
+      }
+
+      .review .box-container .box .user h3 {
+        font-size: 2rem;
+        color: #333;
+      }
+
+      .review .box-container .box .user span {
+        font-size: 1.5rem;
+        color: #999;
+      }
+
+      .contact .row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        align-items: center;
+      }
+
+      .contact .row form {
+        flex: 1 1 40rem;
+        padding: 2rem 2.5rem;
+        box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+        border: 0.1rem solid rgba(0, 0, 0, 0.1);
+        border-radius: 0.5rem;
+        background: #fff;
+      }
+
+      .contact .row .image {
+        flex: 1 1 40rem;
+      }
+
+      .contact .row .image img {
+        width: 70%;
+        margin-left: 150px;
+      }
+
+      .contact .row form .box {
+        padding: 1rem;
+        font-size: 1.7rem;
+        color: #333;
+        text-transform: none;
+        border: 0.1rem solid rgba(0, 0, 0, 0.1);
+        border-radius: 0.5rem;
+        margin: 0.7rem 0;
+        width: 100%;
+      }
+
+      .contact .row form .box:focus {
+        border-color: var(--pink);
+      }
+
+      .contact .row form textarea {
+        height: 20rem;
+        resize: none;
+      }
+
+      .footer .box-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+      }
+
+      .footer .box-container .box {
+        flex: 1 1 25rem;
+      }
+
+      .footer .box-container .box h3 {
+        color: #333;
+        font-size: 2.5rem;
+        padding: 1rem 0;
+      }
+
+      .footer .box-container .box a {
+        color: #666;
+        display: block;
+        font-size: 1.5rem;
+        padding: 1rem 0;
+      }
+
+      .footer .box-container .box a:hover {
+        color: var(--pink);
+        text-decoration: underline;
+      }
+
+      .footer .box-container .box img {
+        margin-top: 1rem;
+        width: 80%;
+        margin-left: -50px;
+        height: 50px;
+      }
+
+      .footer .credit {
+        text-align: center;
+        padding: 1.7rem;
+        margin-top: 1.9rem;
+        font-size: 2rem;
+        color: #333;
+        border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+      }
+
+      .footer .credit span {
+        color: var(--pink);
+      }
+
+      #scrollToTopBtn {
+        position: fixed;
+        bottom: 20px;
+        height: 50px;
+        width: 50px;
+        right: 20px;
+        background-color: #e84393;
+        color: #fff;
+        border: none;
+        border-radius: 50%;
+        padding: 10px 15px;
+        cursor: pointer;
+        display: none;
+      }
+
+      .btnup {
+        font-size: 20px;
+      }
+
+      #scrollToTopBtn:hover {
+        background-color: #e42c85;
+        /* background-color: rgba(216, 223, 231, 0.5); */
+      }
+
+      /*media queries */
+      @media (max-width: 991px) {
+        html {
+          font-size: 55%;
+        }
+
+        header {
+          padding: 2rem;
+        }
+
+        section {
+          padding: 2rem;
+        }
+
+        .home {
+          background-position: left;
+        }
+      }
+
+      @media (max-width: 768px) {
+        header .fa-bars {
+          display: block;
+        }
+
+        header .navbar {
+          position: absolute;
+          top: 100%;
+          left: 0;
+          right: 0;
+          background: #eee;
+          border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+          clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        }
+
+        header #toggler:checked ~ .navbar {
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        }
+
+        header .navbar a {
+          margin: 1.5rem;
+          padding: 1.5rem;
+          background: #fff;
+          border: 0.1rem solid rgba(0, 0, 0, 0.1);
+          display: block;
+        }
+
+        .home .content h3 {
+          font-size: 5rem;
+        }
+
+        .home .content span {
+          font-size: 2.5rem;
+        }
+
+        .icons-container .icons h3 {
+          font-size: 2rem;
+        }
+
+        .icons-container .icons span {
+          font-size: 1.7rem;
+        }
+      }
+
+      @media (max-width: 450px) {
+        html {
+          font-size: 50%;
+        }
+
+        .heading {
+          font-size: 3rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- header section starts -->
+
+    <header>
+      <input type="checkbox" id="toggler" name="" />
+      <label for="toggler" class="fa fa-bars"></label>
+      <a href="#" class="logo">flowers<span>.</span></a>
+      <nav class="navbar">
+        <a href="#home">home</a>
+        <a href="#about">about</a>
+        <a href="#products">products</a>
+        <a href="#review">review</a>
+        <a href="#contact">contact</a>
+      </nav>
+      <div class="icons">
+        <a href="#" class="fa fa-heart"></a>
+        <a href="#" class="fa fa-shopping-cart"></a>
+        <a href="#" class="fa fa-user"></a>
+      </div>
+    </header>
+    <!-- header section ends -->
+
+    <!-- home section starts -->
+
+    <section class="home" id="home">
+      <div class="content">
+        <h3>fresh flowers</h3>
+        <span> naturel & beatiful flowers</span>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          <a href="#" class="btn">shop now</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- home section ends -->
+
+    <!-- about section starts -->
+
+    <!-- https://pixabay.com/videos/waterfall-rainbow-cliff-scenery-63283/ -->
+
+    <section class="about" id="about">
+      <h1 class="heading"><span>about</span> us</h1>
+      <div class="row">
+        <div class="video-container">
+          <video src="my_work_Jrna.mp4" loop autoplay muted></video>
+          <h3>best flower sellers</h3>
+        </div>
+        <div class="content">
+          <h3>why choose us?</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+            comconsequat.Lorem ipsum dolor sit amet, consectetur adipisicing
+            elit, sed do tempor incididunt ut labore et dolore magna aliqua. Ut
+            enim ad minim quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea comconsequat.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+            veniam.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+            do tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+            minim veniam.Lorem ipsum dolor sit amet, consectetur adipisicing
+            elit, sed do tempor incididunt ut labore et dolore magna aliqua. Ut
+            enim ad minim veniam.
+          </p>
+          <a href="#" class="btn">learn more</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- about section ends -->
+
+    <!---icons section starts--->
+
+    <section class="icons-container">
+      <div class="icons">
+        <img
+          src="https://t3.ftcdn.net/jpg/04/14/78/90/360_F_414789044_6xD0f4z9YcHfQimfnighWoUCIqgEJ66G.jpg"
+          alt=""
+        />
+        <div class="info">
+          <h3>free delivery</h3>
+          <span>on all orders</span>
+        </div>
+      </div>
+      <div class="icons">
+        <img
+          src="https://www.pngall.com/wp-content/uploads/13/Fund-PNG-Cutout.png"
+          alt=""
+        />
+        <div class="info">
+          <h3>10 days returns</h3>
+          <span> moneyback garantee</span>
+        </div>
+      </div>
+      <div class="icons">
+        <img src="https://pngimg.com/d/gift_PNG100381.png" alt="" />
+        <div class="info">
+          <h3>offer & gifts</h3>
+          <span>on all orders</span>
+        </div>
+      </div>
+      <div class="icons">
+        <img
+          src="https://img.freepik.com/premium-vector/secure-payment-credit-card-icon-with-shield-secure-transaction-vector-stock-illustration_100456-11325.jpg"
+          alt=""
+        />
+        <div class="info">
+          <h3>secure payments</h3>
+          <span>protected by paypal</span>
+        </div>
+      </div>
+    </section>
+
+    <!---icons section ends--->
+
+    <!---prodcuts section starts--->
+
+    <section class="products" id="products">
+      <h1 class="heading">latest <span>products</span></h1>
+      <div class="box-container">
+        <div class="box">
+          <span class="discount"> -10%</span>
+          <div class="image">
+            <img
+              src="https://e0.pxfuel.com/wallpapers/653/344/desktop-wallpaper-bouquet-red-roses-pot-water-flowers-48960-for-your-mobile-tablet-explore-flower-pot-of-weed-cool-marijuana.jpg"
+            />
+            <div class="icons">
+              <a href="#" class="fa fa-heart"></a>
+              <a href="#" class="cart-btn">add to cart </a>
+              <a href="#" class="fa fa-share"></a>
+            </div>
+          </div>
+          <div class="content">
+            <h3>flower pot</h3>
+            <div class="price">$12.99 <span>$15.99</span></div>
+          </div>
+        </div>
+        <div class="box">
+          <span class="discount"> -15%</span>
+          <div class="image">
+            <img
+              src="https://131367336.cdn6.editmysite.com/uploads/1/3/1/3/131367336/s187527134357926607_p718_i1_w500.jpeg"
+            />
+            <div class="icons">
+              <a href="#" class="fa fa-heart"></a>
+              <a href="#" class="cart-btn">add to cart </a>
+              <a href="#" class="fa fa-share"></a>
+            </div>
+          </div>
+          <div class="content">
+            <h3>flower pot</h3>
+            <div class="price">$12.99 <span>$15.99</span></div>
+          </div>
+        </div>
+        <div class="box">
+          <span class="discount"> -5%</span>
+          <div class="image">
+            <img
+              src="https://static-01.daraz.pk/p/a5c831427d9b96e333b1062cd612a2d7.jpg"
+            />
+            <div class="icons">
+              <a href="#" class="fa fa-heart"></a>
+              <a href="#" class="cart-btn">add to cart </a>
+              <a href="#" class="fa fa-share"></a>
+            </div>
+          </div>
+          <div class="content">
+            <h3>flower pot</h3>
+            <div class="price">$12.99 <span>$15.99</span></div>
+          </div>
+        </div>
+        <div class="box">
+          <span class="discount"> -20%</span>
+          <div class="image">
+            <img
+              src="https://i5.walmartimages.com/asr/bf7f6117-4767-43f9-8a59-3d297803a0b4.94655dbb7e084493151f5f4b7f738bee.jpeg"
+            />
+            <div class="icons">
+              <a href="#" class="fa fa-heart"></a>
+              <a href="#" class="cart-btn">add to cart </a>
+              <a href="#" class="fa fa-share"></a>
+            </div>
+          </div>
+          <div class="content">
+            <h3>flower pot</h3>
+            <div class="price">$12.99 <span>$15.99</span></div>
+          </div>
+        </div>
+        <div class="box">
+          <span class="discount"> -16%</span>
+          <div class="image">
+            <img
+              src="https://img.freepik.com/premium-vector/spathiphyllum-flower-green-floral-leaf-indoor-houseplant-garden-nature-botanical-decorative-interior-exotic-pot-greenery-vase-botany-foliage-isolated-white-background-vector-illustration_345238-1590.jpg"
+            />
+            <div class="icons">
+              <a href="#" class="fa fa-heart"></a>
+              <a href="#" class="cart-btn">add to cart </a>
+              <a href="#" class="fa fa-share"></a>
+            </div>
+          </div>
+          <div class="content">
+            <h3>flower pot</h3>
+            <div class="price">$12.99 <span>$15.99</span></div>
+          </div>
+        </div>
+        <div class="box">
+          <span class="discount"> -3%</span>
+          <div class="image">
+            <img
+              src="https://hips.hearstapps.com/goodhousekeeping-uk/main/galleries/22364/interflora-roses-270115-de.jpg?resize=980:*"
+            />
+            <div class="icons">
+              <a href="#" class="fa fa-heart"></a>
+              <a href="#" class="cart-btn">add to cart </a>
+              <a href="#" class="fa fa-share"></a>
+            </div>
+          </div>
+          <div class="content">
+            <h3>flower pot</h3>
+            <div class="price">$12.99 <span>$15.99</span></div>
+          </div>
+        </div>
+        <div class="box">
+          <span class="discount"> -19%</span>
+          <div class="image">
+            <img
+              src="https://e1.pxfuel.com/desktop-wallpaper/843/427/desktop-wallpaper-roses-plant-pot-flower-white-backgrounds-flowerpot.jpg"
+            />
+            <div class="icons">
+              <a href="#" class="fa fa-heart"></a>
+              <a href="#" class="cart-btn">add to cart </a>
+              <a href="#" class="fa fa-share"></a>
+            </div>
+          </div>
+          <div class="content">
+            <h3>flower pot</h3>
+            <div class="price">$12.99 <span>$15.99</span></div>
+          </div>
+        </div>
+        <div class="box">
+          <span class="discount"> -10%</span>
+          <div class="image">
+            <img
+              src="https://5.imimg.com/data5/SELLER/Default/2022/5/ES/GZ/HL/151666184/6045-1-.jpg"
+            />
+            <div class="icons">
+              <a href="#" class="fa fa-heart"></a>
+              <a href="#" class="cart-btn">add to cart </a>
+              <a href="#" class="fa fa-share"></a>
+            </div>
+          </div>
+          <div class="content">
+            <h3>flower pot</h3>
+            <div class="price">$12.99 <span>$15.99</span></div>
+          </div>
+        </div>
+        <div class="box">
+          <span class="discount"> -17%</span>
+          <div class="image">
+            <img
+              src="https://m.media-amazon.com/images/I/71iYRoJn-TL._AC_UF1000,1000_QL80_.jpg"
+            />
+            <div class="icons">
+              <a href="#" class="fa fa-heart"></a>
+              <a href="#" class="cart-btn">add to cart </a>
+              <a href="#" class="fa fa-share"></a>
+            </div>
+          </div>
+          <div class="content">
+            <h3>flower pot</h3>
+            <div class="price">$12.99 <span>$15.99</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!---prodcuts section ends--->
+
+    <!-- review section starts -->
+
+    <section class="review" id="review">
+      <h1 class="heading">customer's <span>review</span></h1>
+      <div class="box-container">
+        <div class="box">
+          <div class="stars">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+            quis nostrud exercitation ullamco. ipusum dolor sit amit consetur.
+          </p>
+          <div class="user">
+            <img
+              src="https://www.bollywoodhungama.com/wp-content/uploads/2019/02/Madhuri-Dixit-2014-Birthday.jpg"
+            />
+            <div class="user-info">
+              <h3>john deo</h3>
+              <span>happy customer</span>
+            </div>
+          </div>
+          <span class="fa fa-quote-right"></span>
+        </div>
+
+        <div class="box">
+          <div class="stars">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+            quis nostrud exercitation ullamco. ipusum dolor sit amit consetur.
+          </p>
+          <div class="user">
+            <img
+              src="https://media.gettyimages.com/id/946214638/photo/new-delhi-india-march-26-bollywood-actor-tiger-shroff-poses-during-an-interview-with-ht-city.jpg?s=612x612&w=gi&k=20&c=SPmY1ivcila944P2xCJQ2Ou4ooOsYPeQZJYmFyZNEXQ="
+            />
+            <div class="user-info">
+              <h3>john deo</h3>
+              <span>happy customer</span>
+            </div>
+          </div>
+          <span class="fa fa-quote-right"></span>
+        </div>
+        <div class="box">
+          <div class="stars">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+            quis nostrud exercitation ullamco. ipusum dolor sit amit consetur.
+          </p>
+          <div class="user">
+            <img
+              src="https://i.pinimg.com/564x/b8/1a/28/b81a2858c925bd6fa20a3a6bf14c1d88.jpg"
+            />
+            <div class="user-info">
+              <h3>john deo</h3>
+              <span>happy customer</span>
+            </div>
+          </div>
+          <span class="fa fa-quote-right"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- review section ends -->
+
+    <!-- contect sectoin starts -->
+
+    <section class="contact" id="contact">
+      <h1 class="heading"><span>contact</span> us</h1>
+      <div class="row">
+        <form action="">
+          <input type="text" name="" placeholder="name" class="box" />
+          <input type="email" name="" placeholder="email" class="box" />
+          <input type="number" name="" placeholder="number" class="box" />
+          <textarea
+            name=""
+            class="box"
+            placeholder="message"
+            id=""
+            cols="30"
+            rows="10"
+          ></textarea>
+          <input type="submit" value="send message" class="btn" />
+        </form>
+        <div class="image">
+          <img src="https://www.centurypackersmovers.in/images/sidebar2.jpg" />
+        </div>
+      </div>
+    </section>
+
+    <!-- contect sectoin ends -->
+
+    <!-- footer section starts -->
+
+    <section class="footer">
+      <div class="box-container">
+        <div class="box">
+          <h3>quick links</h3>
+          <a href="#">home</a>
+          <a href="#">about</a>
+          <a href="#">products</a>
+          <a href="#">review</a>
+          <a href="#">contact</a>
+        </div>
+
+        <div class="box">
+          <h3>extra links</h3>
+          <a href="#">my acount</a>
+          <a href="#">my order</a>
+          <a href="#">my favorite</a>
+        </div>
+
+        <div class="box">
+          <h3>locations</h3>
+          <a href="#">india</a>
+          <a href="#">USA</a>
+          <a href="#">japan</a>
+          <a href="#">france</a>
+        </div>
+
+        <div class="box">
+          <h3>contact info</h3>
+          <a href="#">+123-456-7890</a>
+          <a href="#">ayesha@gmail.com</a>
+          <a href="#">mumbai, india - 400104</a>
+          <img src="/home/dell/Pictures/Screenshots/pay2.png" />
+        </div>
+      </div>
+      <div class="credit">
+        created by <span> ms. web desginer</span> | all rights reserve
+      </div>
+    </section>
+
+    <button id="scrollToTopBtn" onclick="smoothScrollToTop()">
+      <i class="fa fa-arrow-up btnup"></i>
+    </button>
+
+    <!-- footer section ends -->
+
+    <!-- https://www.youtube.com/watch?v=cLOT0APQzDs -->
+
+    <script>
+      function smoothScrollToTop() {
+        const scrollStep = -window.scrollY / (500 / 500);
+        const scrollInterval = setInterval(() => {
+          if (window.scrollY !== 0) {
+            window.scrollBy(0, scrollStep);
+          } else {
+            clearInterval(scrollInterval);
+          }
+        }, 500);
+      }
+
+      window.onscroll = function () {
+        const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 150
+        ) {
+          scrollToTopBtn.style.display = "block";
+        } else {
+          scrollToTopBtn.style.display = "none";
+        }
+      };
+    </script>
+  </body>
+</html>

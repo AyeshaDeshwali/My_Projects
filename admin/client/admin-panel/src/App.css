@@ -1,0 +1,298 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* src/App.css */
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+/* Admin Panel Layout */
+.admin-panel {
+  display: flex;
+  height: 100vh;
+}
+
+.main-content {
+  margin-left: 250px;
+  padding: 20px;
+  width: 100%;
+  overflow-y: auto;
+  height: 100vh;
+}
+.dashboard {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.card {
+  background-color: #f4f4f4;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  width: 30%; /* Set the width as desired */
+  text-align: center;
+  box-sizing: border-box; /* Ensures padding is included in the width and height */
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+.users {
+  margin-top: 20px;
+}
+
+.users h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.users table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.users table th,
+.users table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+.users table td button {
+  width: 60px;
+  padding: 6px;
+  border: none;
+  margin-left: 10px;
+}
+
+.users table td .add {
+  background: green;
+}
+.users table td .delete {
+  background: red;
+}
+.users table td .update {
+  background: yellow;
+}
+.users table th {
+  background-color: #1a73e8;
+  color: white;
+}
+
+.users table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.users .crud-buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.users .crud-buttons button {
+  padding: 10px 15px;
+  margin-left: 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.users .crud-buttons button.delete {
+  background-color: #dc3545;
+}
+
+.users .crud-buttons button:hover {
+  background-color: #218838;
+  transition: background-color 0.3s ease;
+}
+
+.users .crud-buttons button.delete:hover {
+  background-color: #c82333;
+}
+
+/* UserForm.css */
+
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensures the modal is above all other content */
+}
+
+/* Modal Styling */
+.modal {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+  max-width: 90%; /* Ensures it resizes for smaller screens */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+}
+
+/* Modal Heading (Center only this) */
+.modal h3 {
+  margin-top: 0;
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+  font-family: "Arial", sans-serif;
+  font-weight: bold;
+  text-align: center; /* Center the heading only */
+}
+
+/* Modal Paragraphs (Align content to left) */
+.modal p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 10px;
+  padding-bottom: 5px; /* Adds space between fields */
+  border-bottom: 1px solid #ccc; /* Black line under each field */
+  text-align: left; /* Align text to the left */
+}
+
+/* Modal Address List */
+.modal ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 20px; /* Adds space between address and close button */
+}
+
+.modal ul li {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 8px;
+  padding-bottom: 5px; /* Adds space between address fields */
+  border-bottom: 1px solid #ccc; /* Black line under each address field */
+  text-align: left; /* Align text to the left */
+}
+
+.modal strong {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Close Button */
+.modal button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  background-color: #4caf50; /* Green color */
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+.modal button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+.modal i {
+  color: #1a73e8; /* Icon color */
+  margin-right: 5px; /* Space between the icon and text */
+}
+
+.address-container {
+  display: grid;
+  grid-template-columns: repeat(
+    2,
+    1fr
+  ); /* Two columns layout for address boxes */
+  gap: 15px;
+  margin-top: 10px;
+}
+
+/* Individual Address Box */
+.address-box {
+  background-color: #f4f4f4;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  color: #555;
+}
+
+.address-box strong {
+  color: #333;
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 500px) {
+  .modal {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .modal h3 {
+    font-size: 20px;
+  }
+
+  .modal p,
+  .modal ul li {
+    font-size: 14px;
+  }
+
+  .modal button {
+    width: 100%;
+    font-size: 18px;
+  }
+}

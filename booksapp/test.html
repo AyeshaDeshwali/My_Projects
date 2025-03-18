@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services Section</title>
+    <style>
+      /* Basic reset */
+      body,
+      h2,
+      h3,
+      p {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* Service Section Styles */
+      .services {
+        background-color: #f4f4f4;
+        padding: 40px 0;
+      }
+
+      .container {
+        width: 80%;
+        margin: 0 auto;
+        max-width: 1200px;
+      }
+
+      h2 {
+        text-align: center;
+        font-size: 2em;
+        margin-bottom: 20px;
+      }
+
+      .service-list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+
+      .service-item {
+        background: #fff;
+        padding: 20px;
+        margin: 10px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        flex: 1 1 calc(33% - 20px); /* 3 columns, adjust if needed */
+        max-width: calc(33% - 20px);
+      }
+
+      .service-item h3 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+      }
+
+      .service-item p {
+        font-size: 1em;
+        color: #555;
+      }
+
+      @media (max-width: 768px) {
+        .service-item {
+          flex: 1 1 calc(50% - 20px); /* 2 columns on smaller screens */
+          max-width: calc(50% - 20px);
+        }
+      }
+
+      @media (max-width: 480px) {
+        .service-item {
+          flex: 1 1 100%; /* 1 column on very small screens */
+          max-width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="services">
+      <div class="container">
+        <h2>Our Services</h2>
+        <div class="service-list">
+          <div class="service-item">
+            <h3>Service 1</h3>
+            <p>
+              Details about the first service offered by the company. Describe
+              what it is and how it benefits the customer.
+            </p>
+          </div>
+          <div class="service-item">
+            <h3>Service 2</h3>
+            <p>
+              Details about the second service offered by the company. Explain
+              the features and advantages of this service.
+            </p>
+          </div>
+          <div class="service-item">
+            <h3>Service 3</h3>
+            <p>
+              Description of the third service provided. Include key features
+              and how it stands out from others.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    3>4
+    this is the code for paragraph &lt;p&gt;&lt;/p&gt;
+    <pre>
+        <p>This is a para</p>
+
+
+
+        this is after few new lines           and some more
+    </pre>
+
+    Copyright &copy;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;codewithharry
+
+    <blockquote cite="source-url">
+        Quotation text here.
+    </blockquote>
+    <h1>This is html boilerplate code</h1>
+    <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+  </code></pre>
+</body>
+
+</html> -->

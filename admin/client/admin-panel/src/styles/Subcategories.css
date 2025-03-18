@@ -1,0 +1,330 @@
+.subcategories-page {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 20px;
+  background-color: #f4f7f6; /* Subtle background color for the page */
+}
+
+.subcategory-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center; /* Center the items */
+  margin-top: 30px;
+}
+
+/* Subcategory Box (Card Style) */
+.subcategory-box {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  width: 300px; /* Fixed width for each product box */
+  height: auto; /* Adjusted height to fit content */
+  border: 1px solid #ddd;
+  border-radius: 12px; /* Slightly rounded corners */
+  background-color: #ffffff; /* White background for clean look */
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1); /* Enhanced soft shadow */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth hover effect */
+  overflow: hidden;
+}
+
+.subcategory-box:hover {
+  transform: translateY(-8px); /* Lift effect on hover */
+  box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.15); /* Deepened shadow on hover */
+}
+
+.subcategory-box h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333; /* Dark color for readability */
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.subcategory-box .price-and-delivery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 15px;
+}
+
+.subcategory-box .price-and-delivery p {
+  font-size: 16px;
+  color: #444;
+  font-weight: 500;
+}
+
+.subcategory-image img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover; /* Ensure images fit nicely */
+  border-radius: 8px; /* Rounded corners for images */
+  margin-bottom: 15px;
+}
+
+/* Accordion for additional details */
+.accordion-button {
+  background-color: #f7f7f7;
+  color: #333;
+  border: 1px solid #ddd;
+  padding: 10px;
+  width: 100%;
+  font-size: 14px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.accordion-button:hover {
+  background-color: #ddd;
+}
+
+.accordion-content {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  width: 100%;
+}
+
+.accordion-content div {
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgb(145, 145, 145);
+}
+
+.accordion-content div label {
+  font-weight: bold;
+  font-size: 17px;
+  color: #424141;
+}
+
+.accordion-content div span {
+  color: #444; /* Text color */
+  margin: 0px 0px 5px 0px; /* Uniform margin for consistency */
+  text-align: justify; /* Aligns text uniformly */
+  line-height: 1.5; /* Makes text spacing consistent for readability */
+  font-size: 15px; /* Adjust font size for uniformity */
+  margin-left: 5px;
+  word-break: break-word; /* Ensures long text doesn't overflow */
+}
+.star-rating {
+  display: flex;
+  flex-direction: column; /* Stack stars and reviews vertically */
+  align-items: center; /* Center both text and stars horizontally */
+  gap: 5px; /* Space between reviews text and stars */
+}
+.star-rating span {
+  margin: 0;
+  font-size: 14px;
+  color: #444;
+  font-weight: bold; /* Makes the "Reviews:" text bold */
+}
+.star-rating i {
+  color: #f8c12c; /* Golden color for filled stars */
+  font-size: 18px; /* Adjust the size of the stars */
+}
+
+.star-rating i.fa-star-half-stroke {
+  color: #f8c12c; /* Golden color for half star */
+}
+/* Add Subcategory Button */
+.add-subcategory-btn {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.add-subcategory-btn:hover {
+  background-color: #45a049;
+}
+
+/* Form Styling */
+.add-form {
+  display: flex;
+  flex-direction: row; /* Horizontal layout for form */
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.add-form div {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 120px; /* Minimum width for each field */
+}
+
+.add-form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.add-form input,
+.add-form textarea {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.add-form input:focus,
+.add-form textarea:focus {
+  border-color: #007bff;
+}
+/* Ensure the search box is centered */
+.search-and-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Adjust search box style */
+.search-box input {
+  width: 300px; /* Set a fixed width for the search input */
+  padding: 8px;
+  border-radius: 4px;
+  margin: 10px;
+  border: 1px solid #ccc;
+}
+
+/* Add a margin to the button */
+.search-and-button button {
+  margin-left: 10px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: none;
+  background-color: #4caf50; /* Green color */
+  color: white;
+  cursor: pointer;
+}
+
+.search-and-button button:hover {
+  opacity: 0.8;
+}
+
+/* Subcategory List Styling */
+.subcategory-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.subcategory-box {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  width: 300px; /* Fixed width for each subcategory item */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.subcategory-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+button[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  margin-top: 15px;
+}
+
+button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+button.cancel-btn {
+  background-color: #f44336;
+  color: white;
+  margin-left: 10px;
+}
+
+button.cancel-btn:hover {
+  background-color: #e53935;
+}
+
+/* Form container styles */
+.form-container {
+  position: fixed; /* Fixed position on the screen */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Adjust the position to perfectly center */
+  background-color: white; /* Form background */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000; /* Ensure it's on top of other elements */
+  width: 80%;
+  max-width: 600px;
+  animation: fadeIn 0.3s ease-in-out; /* Optional: Add animation */
+}
+
+/* Overlay style for the page when form is shown */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.66);
+  z-index: 999;
+}
+
+/* Fade-in animation for the form */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Hide icons by default */
+.icon-container {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Show icons on hover */
+.subcategory-box:hover .icon-container {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Additional styling for icons */
+.icon-container i {
+  cursor: pointer;
+  margin: 0 10px;
+  font-size: 20px;
+  color: #333; /* Default icon color */
+  transition: color 0.3s ease;
+}
+
+.icon-container i:hover {
+  color: #007bff; /* Hover color for edit icon */
+}
+
+.icon-container i.fa-trash-can:hover {
+  color: red; /* Hover color for delete icon */
+}

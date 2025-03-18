@@ -1,0 +1,125 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(148, 147, 147);
+}
+
+.container {
+  padding: 10px;
+  max-width: fit-content;
+  margin: 20px auto;
+}
+
+.btn {
+  border: none;
+  padding: 7px 15px;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-add {
+  background: #32bcce;
+  color: white;
+  width: 100px;
+  margin-left: 42%;
+  margin-bottom: -9px;
+}
+
+.addContainer {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.2);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.addContainer form {
+  width: 420px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  padding: 50px 40px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  border-radius: 5px;
+}
+.addContainer form input {
+  font-size: 18px;
+  padding: 5px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.addContainer form label {
+  font-size: 18px;
+}
+
+.addContainer form button {
+  margin-top: 20px;
+  font-weight: 500;
+}
+
+.addContainer form .close-btn {
+  margin-left: auto;
+  font-size: 18px;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  border: 2px solid #000;
+  cursor: pointer;
+}
+
+.tableContainer {
+  background-color: aliceblue;
+  margin-top: 50px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  border-radius: 5px;
+}
+
+.tableContainer table thead tr {
+  background-color: rgb(167, 255, 108);
+}
+
+.tableContainer table thead tr th,
+.tableContainer table tbody tr td {
+  min-width: 200px;
+  padding: 7px;
+  text-align: center;
+}
+
+.tableContainer table tbody tr td {
+  border-bottom: 1px solid black;
+}
+
+.btn-edit,
+.btn-delete {
+  font-size: 16px;
+  padding: 5px 10px;
+  margin: 0px 10px;
+}
+
+.btn-edit {
+  background: rgb(238, 156, 4);
+  color: white;
+}
+
+.btn-delete {
+  background: rgb(212, 54, 54);
+  color: white;
+}
+
+.submit {
+  background-color: forestgreen;
+  color: white;
+}
