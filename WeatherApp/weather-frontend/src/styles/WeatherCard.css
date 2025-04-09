@@ -1,0 +1,466 @@
+/* 🌙 Dark Mode Card */
+.weather-card {
+  background: #0b1726;
+  color: #b0c4de;
+  padding: 20px;
+  border-radius: 15px;
+  font-family: "Poppins", sans-serif;
+  box-shadow: rgba(185, 183, 183, 0.664) 0px 4px 12px;
+}
+
+/* 🔘 Header with Toggle */
+.weather-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 19px;
+  color: hsl(180, 93%, 46%);
+}
+
+/* 🌡️ Weather Content */
+.weather-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 📍 Location */
+.location {
+  font-size: 25px;
+  color: #45ffb8;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+/* 🌤 Temperature & Icon */
+.temp-icon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  bottom: 30px;
+  font-size: 30px;
+}
+
+.weather-icon {
+  width: 100px;
+}
+
+.temp {
+  font-size: 50px;
+  /* font-weight: bold; */
+  color: #45ffb8;
+}
+
+/* ⛈️ Weather Description */
+.description {
+  font-size: 20px;
+  position: relative;
+  top: -60px;
+  left: 30px;
+  color: #45ffb8;
+
+  text-transform: capitalize;
+}
+
+/* 📊 Right Side Details */
+.weather-right {
+  text-align: right;
+  color: #45ffb8;
+  position: relative;
+  top: 10px;
+}
+
+/* ☀️ Feels Like */
+.feels-like {
+  font-size: 20px;
+  color: #45ffb8;
+  /* font-weight: bold; */
+  letter-spacing: 1px;
+  margin-right: 70px;
+}
+
+/* 🔼🔽 Min/Max Temp */
+.temp-range {
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+/* 🔹 Extra Details */
+.extra-details p {
+  font-size: 18px;
+  /* font-weight: bold; */
+  display: flex;
+  justify-content: space-between;
+  color: #45ffb8;
+}
+
+.extra-details span {
+  /* font-weight: bold; */
+  color: #45ffb8;
+}
+/* 🔘 Toggle Button */
+.toggle {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.toggle span {
+  font-size: 22px;
+  /* color: #5e6e85; */
+  color: hsl(180, 93%, 46%);
+  transition: color 0.3s;
+}
+
+.toggle span.active {
+  color: white; /* 🔥 Active color */
+  font-weight: bold;
+}
+
+.toggle-btn {
+  width: 50px;
+  height: 22px;
+  background: #093bb9;
+  border-radius: 50px;
+  position: relative;
+  transition: background 0.3s;
+}
+
+.toggle-btn::after {
+  content: "";
+  width: 17px;
+  height: 17px;
+  background: hsl(180, 93%, 46%);
+  position: absolute;
+  top: 50%;
+  left: 3px;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  transition: left 0.3s, background 0.3s;
+}
+
+.toggle-btn.toggled {
+  background: #1d3557;
+}
+
+.toggle-btn.toggled::after {
+  left: 30px;
+  background: white;
+}
+.weather-card .date p {
+  color: #45ffb8;
+  font-size: 18px;
+}
+.date {
+  position: relative;
+  top: -70px;
+  left: 29px;
+  color: #45ffb8;
+  font-weight: bold;
+  font-size: 20px;
+} /* Clear */
+.day-clear {
+  background: url("https://i.makeagif.com/media/1-20-2017/Dcv7Ly.gif") no-repeat
+    center center/cover;
+  color: #000;
+}
+.night-clear {
+  background: url("https://i.pinimg.com/originals/23/10/d0/2310d00ecb62652effea3eb25eaf9ed4.gif")
+    no-repeat center center/cover;
+  color: #000;
+}
+
+/* Cloudy */
+.day-cloudy {
+  background: url("https://media.istockphoto.com/id/491701259/photo/blue-sky-with-sun.jpg?b=1&s=612x612&w=0&k=20&c=pXja9Ol8hfw_TF2pqiBYJHvAWb-0xWPLDD5xcgDCNuQ=")
+    no-repeat center center/cover;
+  color: #000;
+}
+.night-cloudy {
+  background: url("https://media.istockphoto.com/id/1154430991/photo/dark-blue-storm-cloudy-sky-background.jpg?s=612x612&w=0&k=20&c=kK_3sE1N8-Z_Oac2l_PG6LsEwAUHoswDOHahmNffSpQ=")
+    no-repeat center center/cover;
+  color: #fff;
+}
+
+/* Rain */
+.day-rain {
+  background: url("https://cdn.pixabay.com/animation/2023/03/05/12/05/12-05-54-62_512.gif")
+    no-repeat center center/cover;
+  color: #000;
+}
+.night-rain {
+  background: url("https://phoneky.co.uk/thumbs/screensavers/down/nature/rainynight_41ow84pd.gif")
+    no-repeat center center/cover;
+  color: #fff;
+}
+
+/* Thunderstorm */
+.day-thunderstorm {
+  background: url("https://www.shutterstock.com/image-photo/several-lightning-bolts-strike-down-600nw-1794702010.jpg")
+    no-repeat center center/cover;
+  color: #fff;
+}
+.night-thunderstorm {
+  background: url("https://www.shutterstock.com/image-photo/several-lightning-bolts-strike-down-600nw-1794702010.jpg")
+    no-repeat center center/cover;
+  color: #fff;
+}
+
+/* Snow */
+.day-snow {
+  background: url("https://www.icegif.com/wp-content/uploads/2024/12/snow-day-icegif-11.gif")
+    no-repeat center center/cover;
+  color: #000;
+}
+.night-snow {
+  background: url("https://www.icegif.com/wp-content/uploads/2023/02/icegif-1341.gif")
+    no-repeat center center/cover;
+  color: #fff;
+}
+
+/* Mist/Haze/Fog */
+.day-haze {
+  background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6qpliM-VM3WJEc9_dMCSmajUISt6v6BS0JA&s")
+    no-repeat center center/cover;
+  color: #000;
+}
+.night-haze {
+  background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKjGvP18fsczt9Ay_mqRr8tqItdGbexoR1dzUCqlg8_4d_Gr0JZGkfVJBUdGkmhTJ6z4M&usqp=CAU")
+    no-repeat center center/cover;
+  color: #fff;
+}
+
+/* ----------------------------------------------------------------------------------------- */
+
+/* Sunrise */
+.sunrise {
+  background: url("https://images.pexels.com/photos/1905054/pexels-photo-1905054.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500")
+    no-repeat center center/cover;
+  color: #000;
+}
+
+/* Sunset */
+.sunset {
+  background: url("https://media.istockphoto.com/id/538449165/photo/beautiful-cloudscape-over-the-sea-sunset-shot.jpg?s=612x612&w=0&k=20&c=XwieRIV5Df3Azuk8tH3CnAlLA-GO5GBE7R7dKtb1POw=")
+    no-repeat center center/cover;
+  color: #fff;
+}
+
+/* Light Cloudy */
+.day-cloudy-light {
+  background: url("https://media.istockphoto.com/id/1324413691/photo/beautiful-sky-with-white-clouds.jpg?s=612x612&w=0&k=20&c=40a8JIoRJ1BAI4XeyEouZl0QbVAJToDBRQn31S3FGzk=")
+    no-repeat center center/cover;
+  color: #000;
+}
+.night-cloudy-light {
+  background: url("https://www.shutterstock.com/image-photo/panorama-daytime-sky-clouds-sunset-600nw-2464926411.jpg")
+    no-repeat center center/cover;
+  color: #fff;
+}
+
+/* Heavy Cloudy */
+.day-cloudy-heavy {
+  background: url("https://media.istockphoto.com/id/884015038/photo/over-head-shot-of-rain-cloud-weather-change.jpg?s=612x612&w=0&k=20&c=9PDtKwa7ChptgRnMrpV1QtyAXlipXNTWnNCFiA-LGLU=")
+    no-repeat center center/cover;
+  color: #000;
+}
+.night-cloudy-heavy {
+  background: url("https://www.shutterstock.com/image-photo/dark-sky-heavy-clouds-converging-600nw-2335115441.jpg")
+    no-repeat center center/cover;
+  color: #fff;
+}
+
+/* Light Rain */
+.rain-light {
+  background: url("https://i.pinimg.com/originals/10/45/0a/10450a83a7143343831fca9ec030fe47.gif")
+    no-repeat center center/cover;
+  color: #fff;
+}
+
+/* Sandstorm / Dust / Tornado */
+.sandstorm {
+  background: url("https://www.shutterstock.com/image-photo/climate-change-africa-dramatic-dusty-260nw-1751879375.jpg")
+    no-repeat center center/cover;
+  color: #fff;
+}
+.day-drizzle {
+  background: url("https://i.pinimg.com/originals/51/9a/83/519a837a74de5c3a0638a40a31ae0324.gif")
+    no-repeat center center/cover;
+  color: #000;
+}
+.night-drizzle {
+  background: url("https://i.pinimg.com/originals/fe/f2/fb/fef2fbdd9a8190f5ae993c1f1a4a0736.gif")
+    no-repeat center center/cover;
+  color: #fff;
+}
+/* -------------------------------------------------------------------------------------------- */
+.day-default-bg {
+  background: linear-gradient(to top, #a2d4ff, #e3f2fd);
+  color: #000;
+}
+
+.night-default-bg {
+  background: linear-gradient(to top, #0b1726, #1d2a35);
+  color: #fff;
+}
+.weather-card p,
+.weather-card h2 {
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+.night-clear,
+.night-cloudy,
+.night-rain,
+.night-thunderstorm,
+.night-snow {
+  color: #f0f0f0; /* ya white */
+}
+/* ✅ Default for Desktop (already exists, no change) */
+
+/* Tablet (max-width: 768px) */
+/* ✅ Tablet (max-width: 768px) */
+@media (max-width: 768px) {
+  /* .weather-card {
+    margin-top: 30px;
+    padding: 18px;
+  } */
+
+  .weather-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .weather-header {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    text-align: center;
+  }
+
+  .weather-left,
+  .weather-right {
+    width: 100%;
+    text-align: center;
+  }
+
+  .temp-icon {
+    bottom: 0;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .description {
+    top: -10px;
+    left: 0;
+    text-align: center;
+  }
+
+  .temp {
+    font-size: 42px;
+  }
+
+  .weather-icon {
+    width: 75px;
+  }
+
+  .date {
+    position: static;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+
+  .feels-like,
+  .temp-range {
+    justify-content: space-between;
+    margin: 10px 0;
+  }
+
+  .toggle {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .toggle span {
+    font-size: 21px;
+    font-weight: bold;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+  }
+}
+
+/* ✅ Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+  .weather-card {
+    padding: 12px;
+    margin: 20px 10px;
+  }
+
+  .weather-header h2 {
+    font-size: 18px;
+  }
+
+  .temp {
+    font-size: 36px;
+    margin-top: 0px;
+  }
+
+  .weather-icon {
+    width: 60px;
+    margin-top: -30px;
+  }
+
+  .description {
+    font-size: 18px;
+    position: static;
+    margin-top: 10px;
+  }
+
+  .date {
+    font-size: 13px;
+    margin-bottom: 10px;
+    margin-top: -10px;
+  }
+
+  /* .feels-like,
+  .temp-range {
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  } */
+
+  .feels-like {
+    margin-top: -10px;
+  }
+  .extra-details {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .extra-details p {
+    font-size: 14px;
+  }
+
+  .toggle span {
+    font-size: 21px;
+    font-weight: bold;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+  }
+
+  .toggle-btn {
+    width: 45px;
+    height: 20px;
+  }
+
+  .toggle-btn::after {
+    width: 15px;
+    height: 15px;
+    left: 2px;
+  }
+
+  .toggle-btn.toggled::after {
+    left: 26px;
+  }
+}

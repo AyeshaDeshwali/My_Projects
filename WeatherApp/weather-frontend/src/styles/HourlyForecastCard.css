@@ -1,0 +1,15 @@
+.hourly-forecast {
+  display: flex;
+  overflow-x: auto;
+  gap: 12px;
+  padding: 10px;
+}
+
+.hour-card {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 10px;
+  text-align: center;
+  min-width: 80px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}

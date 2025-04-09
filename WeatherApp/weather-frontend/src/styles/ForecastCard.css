@@ -1,0 +1,89 @@
+.forecast-container {
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.forecast-container h3 {
+  font-size: 20px;
+  color: #50c9c3;
+  margin-bottom: 30px;
+  margin-top: -10px;
+  text-align: center;
+}
+
+.forecast-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* 🌐 Desktop – Exactly 7 cards in one row */
+@media screen and (min-width: 1025px) {
+  .forecast-card {
+    flex: 0 0 calc(100% / 7 - 10px); /* 7 equal cards with little gap */
+    max-width: calc(100% / 7 - 10px);
+  }
+}
+
+.forecast-card {
+  background: #253044;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  margin: 5px 0;
+  transition: transform 0.3s ease;
+}
+
+.forecast-card:hover {
+  transform: scale(1.05);
+}
+
+.day-name {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.temperature {
+  font-size: 18px;
+  font-weight: bold;
+  color: #50c9c3;
+}
+
+.weather-description {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* 📱 Mobile: 0–500px – 1 card per row */
+@media screen and (max-width: 500px) {
+  .forecast-grid {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .forecast-card {
+    width: 90%;
+    padding: 0px;
+  }
+}
+
+/* 📱 501–700px – 2 cards per row */
+@media screen and (min-width: 501px) and (max-width: 700px) {
+  .forecast-grid {
+    justify-content: space-around;
+  }
+  .forecast-card {
+    flex: 0 0 48%;
+  }
+}
+
+/* 📱 701–1024px – 3 cards per row */
+@media screen and (min-width: 701px) and (max-width: 1024px) {
+  .forecast-card {
+    flex: 0 0 30%;
+  }
+}

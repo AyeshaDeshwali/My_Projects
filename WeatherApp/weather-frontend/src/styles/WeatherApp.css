@@ -1,0 +1,306 @@
+body {
+  background-color: #0b1120;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  margin-top: 10px;
+  /* max-width: 700px; */
+  text-align: center;
+  /* padding: 20px; */
+}
+
+.container h1,
+p {
+  color: white;
+}
+/* WeatherApp.css ya jahan bhi error style likh rahi ho */
+.error {
+  margin-top: 10px;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.error-red {
+  color: #f44336; /* Red */
+}
+
+.error-default {
+  color: white; /* Ya jo default chahiye */
+}
+
+.error i {
+  margin-right: 4px;
+}
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+.loader::after {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #ff3d00;
+  width: 16px;
+  height: 16px;
+  transform: translate(-50%, 50%);
+  border-radius: 50%;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.input-logout-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  background-color: #1e293b;
+  border-radius: 10px;
+  padding: 0 10px;
+  flex-wrap: wrap;
+}
+
+.input-container input {
+  width: 300px;
+  height: 45px;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: white;
+  font-size: 16px;
+  padding: 0 10px;
+}
+
+/* Get Weather button for large screens */
+.get-weather-btn {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  width: 100px;
+  height: 45px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  position: relative;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  left: 10px;
+  display: inline-block;
+}
+
+.get-weather-btn:hover {
+  background-color: #2563eb;
+}
+
+/* Search icon button for small screens */
+.search-icon-btn {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  width: 45px;
+  height: 45px;
+  border-radius: 5px;
+  margin-left: 10px;
+  cursor: pointer;
+  display: none; /* hidden by default */
+}
+
+.search-icon-btn i {
+  font-size: 18px;
+}
+
+/* Logout buttons */
+.logout-btn {
+  border: 1px solid #f07979;
+  color: white;
+  height: 45px;
+  padding: 0 15px;
+  background-color: transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+  margin-left: 10px;
+  transition: background-color 0.3s ease;
+}
+
+/* Text logout visible by default */
+.logout-text-btn {
+  display: inline-block;
+}
+
+.logout-icon-btn {
+  display: none;
+}
+
+.logout-btn:hover {
+  border: none;
+  background-color: #f07979;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-box {
+  position: relative;
+  background: #fff;
+  padding: 40px 30px 25px;
+  border-radius: 16px;
+  text-align: center;
+  width: 330px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.logout-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.modal-box h3 {
+  margin-top: 10px;
+  font-size: 22px;
+  color: #333;
+  font-weight: bold;
+}
+
+.modal-box p {
+  font-size: 15px;
+  color: #555;
+  margin: 15px 0 25px;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.confirm-btn,
+.cancel-btn {
+  flex: 1;
+  margin: 0 5px;
+  padding: 10px 0;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.confirm-btn {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.cancel-btn {
+  background-color: #bfe8d2;
+  color: #2e7d32;
+}
+
+/* ------------------- Responsive ------------------- */
+
+@media (max-width: 700px) {
+  .modal-box {
+    width: 250px;
+    box-shadow: rgba(255, 255, 255, 0.432) 0px 4px 12px;
+  }
+  .logout-icon {
+    width: 50px;
+    height: 50px;
+    top: -23px;
+  }
+
+  .modal-box h3 {
+    font-size: 20px;
+  }
+  .modal-box p {
+    font-size: 13px;
+  }
+
+  .confirm-btn,
+  .cancel-btn {
+    flex: 1;
+    margin: 0 5px;
+    padding: 8px 0;
+    font-size: 13px;
+  }
+  .get-weather-btn {
+    display: none;
+  }
+
+  .search-icon-btn {
+    display: inline-block;
+  }
+
+  .input-container input {
+    width: 58vw;
+    height: 25px;
+    padding: 10px 6px 0px 6px;
+    margin-bottom: 10px;
+  }
+
+  .search-icon-btn {
+    position: relative;
+    left: 8px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    height: 41px;
+  }
+
+  .logout-icon-btn i {
+    font-size: 20px;
+  }
+
+  .logout-text-btn {
+    display: none;
+  }
+
+  .logout-icon-btn {
+    width: 40px;
+    height: 40px;
+    padding: 3px 0px 0px 0px;
+    display: inline-block;
+  }
+}
